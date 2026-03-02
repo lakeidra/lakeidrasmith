@@ -126,7 +126,7 @@ const About = () => {
               <Link to="/contact">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-cognac">Get in Touch</Button>
               </Link>
-              <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10">Get the Book</Button>
               </a>
               <Link to="/contact?service=keynote">

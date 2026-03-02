@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://calendly.com/user"
+              href="https://calendly.com/podcast-lakeidra/discovery-call"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -54,7 +54,7 @@ const Navbar = () => {
               </Button>
             </a>
             <a
-              href="https://book-purchase-link.com"
+              href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -93,13 +93,13 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
-                <a href="https://calendly.com/user" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/podcast-lakeidra/discovery-call" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full gap-2 border-primary/30 text-foreground">
                     <Calendar className="w-4 h-4" />
                     Schedule a Call
                   </Button>
                 </a>
-                <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-cognac">
                     Get the Book
                   </Button>

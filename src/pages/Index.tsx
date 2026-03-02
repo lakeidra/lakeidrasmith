@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import heroImage from "@/assets/hero-home.jpg";
 import aboutPortrait from "@/assets/about-portrait.jpg";
-import bookCover from "@/assets/book-cover.jpg";
+import bookCover from "@/assets/book-cover.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -53,7 +53,7 @@ const Index = () => {
               I'm Lakeidra Smith — cybersecurity educator, keynote speaker, and author of Cyber Curiosity. I help people stop feeling helpless about their digital safety and start feeling like the capable, curious humans they already are.
             </motion.p>
             <motion.div variants={fadeUp} custom={3} className="mt-8 flex flex-wrap gap-4">
-              <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-cognac text-base px-8">
                   Get the Book
                 </Button>
@@ -169,7 +169,7 @@ const Index = () => {
               <p className="mt-6 text-muted-foreground leading-relaxed font-body">
                 Cyber Curiosity introduces <strong>Pause. Ask. Verify.</strong> and shows you how to weave it into your daily life — without overwhelm, without jargon, and without feeling like it's someone else's problem.
               </p>
-              <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-cognac gap-2">
                   Get your copy <ArrowRight className="w-4 h-4" />
                 </Button>
