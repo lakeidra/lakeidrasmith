@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Pause, HelpCircle, ShieldCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
-import bookCover from "@/assets/book-cover.jpg";
+import bookCover from "@/assets/book-cover.png";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 
 const fade = {
@@ -28,7 +28,7 @@ const BookPage = () => {
               <p className="mt-6 text-lg font-heading italic text-muted-foreground">
                 The framework for protecting yourself in a digital world designed to exploit you.
               </p>
-              <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-cognac gap-2">
                   Get Your Copy <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -128,7 +128,7 @@ const BookPage = () => {
           <h2 className="font-heading text-3xl md:text-4xl font-semibold text-cream">Get Your Copy</h2>
           <div className="mt-6 w-16 h-0.5 bg-gold mx-auto" />
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-cognac gap-2 w-full sm:w-auto">
                 Buy Now <ArrowRight className="w-4 h-4" />
               </Button>

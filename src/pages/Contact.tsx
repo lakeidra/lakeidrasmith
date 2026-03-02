@@ -165,11 +165,11 @@ const Contact = () => {
               <div className="border-t border-border pt-8">
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-4">Quick Links</h3>
                 <div className="space-y-3">
-                  <a href="https://calendly.com/user" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
+                  <a href="https://calendly.com/podcast-lakeidra/discovery-call" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
                     <Calendar className="w-5 h-5 text-primary" />
                     Schedule a Call
                   </a>
-                  <a href="https://book-purchase-link.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
+                  <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
                     <BookOpen className="w-5 h-5 text-primary" />
                     Get the Book
                   </a>

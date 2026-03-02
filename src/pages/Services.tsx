@@ -73,7 +73,7 @@ const services = [
       "It is the foundation of everything The Cyber Consultant teaches. Available individually or in bulk for workshop and conference use.",
     ],
     cta: "Order Individual Copies",
-    link: "https://book-purchase-link.com",
+    link: "https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/",
     external: true,
     secondaryCta: "Inquire About Bulk Orders",
     secondaryLink: "/contact?service=bulk-order",
