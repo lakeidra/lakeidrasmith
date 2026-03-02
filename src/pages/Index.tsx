@@ -23,7 +23,7 @@ const Index = () => {
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Lakeidra Smith seated in warm natural light" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40" />
         </div>
         <div className="relative container mx-auto px-6 lg:px-12 py-32">
           <motion.div
@@ -59,7 +59,7 @@ const Index = () => {
                 </Button>
               </a>
               <Link to="/contact?service=keynote">
-                <Button size="lg" variant="outline" className="border-cream/40 text-cream hover:bg-cream/10 text-base px-8">
+                <Button size="lg" variant="outline" className="border-2 border-cream bg-cream/10 text-cream hover:bg-cream/20 backdrop-blur-sm text-base px-8">
                   Invite Me to Speak
                 </Button>
               </Link>
