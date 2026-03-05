@@ -1,22 +1,7 @@
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Clock, Calendar, BookOpen, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Globe, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-
-const serviceOptions = [
-  { value: "keynote", label: "Keynote & Speaking" },
-  { value: "workshop", label: "Workshop & Team Training" },
-  { value: "curriculum", label: "Curriculum Development" },
-  { value: "advisory", label: "Advisory Services" },
-  { value: "bulk-order", label: "Book Purchase / Bulk Order" },
-  { value: "hello", label: "Other / Just Saying Hello" },
-];
 
 const fade = {
   hidden: { opacity: 0, y: 30 },
@@ -24,34 +9,28 @@ const fade = {
 };
 
 const Contact = () => {
-  const [searchParams] = useSearchParams();
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [service, setService] = useState("");
-
   useEffect(() => {
-    const serviceParam = searchParams.get("service");
-    if (serviceParam) {
-      setService(serviceParam);
+    // Load Tally embed script
+    const w = "https://tally.so/widgets/embed.js";
+    const v = () => {
+      if (typeof (window as any).Tally !== "undefined") {
+        (window as any).Tally.loadEmbeds();
+      } else {
+        document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e: any) => {
+          e.src = e.dataset.tallySrc;
+        });
+      }
+    };
+    if (typeof (window as any).Tally !== "undefined") {
+      v();
+    } else if (!document.querySelector(`script[src="${w}"]`)) {
+      const s = document.createElement("script");
+      s.src = w;
+      s.onload = v;
+      s.onerror = v;
+      document.body.appendChild(s);
     }
-  }, [searchParams]);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out! I'll be in touch within 48 hours.",
-    });
-
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-    setService("");
-  };
+  }, []);
 
   return (
     <main className="pt-20">
@@ -72,7 +51,7 @@ const Contact = () => {
       <section className="pb-24 lg:pb-32">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 max-w-6xl mx-auto">
-            {/* Form */}
+            {/* Tally Form */}
             <motion.div
               className="lg:col-span-3"
               initial="hidden"
@@ -80,60 +59,16 @@ const Contact = () => {
               viewport={{ once: true }}
               variants={fade}
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
-                    <Input id="name" name="name" required placeholder="Your name" className="bg-background" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input id="email" name="email" type="email" required placeholder="you@example.com" className="bg-background" />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company / Organization</Label>
-                    <Input id="company" name="company" placeholder="Optional" className="bg-background" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="Optional" className="bg-background" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="service">What are you interested in?</Label>
-                  <Select value={service} onValueChange={setService}>
-                    <SelectTrigger className="bg-background">
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {serviceOptions.map((opt) => (
-                        <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    placeholder="Tell me a little about what you're looking for..."
-                    className="bg-background resize-none"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="bg-primary text-primary-foreground hover:bg-cognac w-full sm:w-auto"
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+              <iframe
+                data-tally-src="https://tally.so/embed/VLZxR6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="1180"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Contact The Cyber Consultant"
+              />
             </motion.div>
 
             {/* Sidebar Info */}
@@ -147,41 +82,37 @@ const Contact = () => {
               <div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-4">Contact Info</h3>
                 <div className="space-y-4">
-                  <a href="mailto:hello@thecyberconsultantllc.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
+                  <a href="mailto:hello@lakeidra.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
                     <Mail className="w-5 h-5 text-primary" />
-                    hello@thecyberconsultantllc.com
+                    hello@lakeidra.com
                   </a>
                   <div className="flex items-center gap-3 text-muted-foreground font-body">
                     <MapPin className="w-5 h-5 text-primary" />
                     Birmingham, Alabama
                   </div>
-                  <div className="flex items-center gap-3 text-muted-foreground font-body">
-                    <Clock className="w-5 h-5 text-primary" />
-                    Typically responds within 48 hours
-                  </div>
+                  <a href="https://the-cyber-consultant.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
+                    <Globe className="w-5 h-5 text-primary" />
+                    the-cyber-consultant.com
+                  </a>
                 </div>
               </div>
 
               <div className="border-t border-border pt-8">
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-4">Quick Links</h3>
-                <div className="space-y-3">
-                  <a href="https://calendly.com/podcast-lakeidra/discovery-call" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
-                    <Calendar className="w-5 h-5 text-primary" />
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">Or schedule a discovery call directly</h3>
+                <a href="https://calendly.com/podcast-lakeidra/discovery-call" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-cognac gap-2 w-full">
+                    <Calendar className="w-5 h-5" />
                     Schedule a Call
-                  </a>
-                  <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors font-body">
-                    <BookOpen className="w-5 h-5 text-primary" />
-                    Get the Book
-                  </a>
-                </div>
+                  </Button>
+                </a>
               </div>
 
               <div className="border-t border-border pt-8">
                 <p className="text-sm text-muted-foreground font-body">
                   Prefer to connect directly?
                 </p>
-                <a href="mailto:hello@thecyberconsultantllc.com" className="inline-flex items-center gap-2 mt-2 text-primary hover:text-cognac transition-colors font-medium font-body">
-                  hello@thecyberconsultantllc.com <ArrowRight className="w-4 h-4" />
+                <a href="mailto:hello@lakeidra.com" className="inline-flex items-center gap-2 mt-2 text-primary hover:text-cognac transition-colors font-medium font-body">
+                  hello@lakeidra.com <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>

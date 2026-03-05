@@ -32,9 +32,9 @@ const services = [
       "Our workshops are built around real scenarios, not slides full of statistics. Participants learn to recognize threats by developing the same instinct Lakeidra teaches in her book: pause, ask, verify.",
     ],
     offerings: [
-      { name: "The Spark Session", desc: "A 90-minute interactive experience for teams of up to 50. Fast, focused, and immediately actionable.", price: "Starting at $3,500 virtual / $5,000 in-person" },
-      { name: "The Cyber Curiosity Workshop", desc: "A half-day experience for teams of up to 75. The full Cyber Curiosity methodology — habit assessment, scenario simulations, and a personalized action plan. Each participant receives a copy of Cyber Curiosity.", price: "Starting at $7,500 virtual / $10,000 in-person" },
-      { name: "The Executive Cyber Briefing", desc: "A focused 60-minute strategic session for leadership teams of 10-20. Not a training — a risk conversation in the language executives speak.", price: "Starting at $5,000 virtual / $7,500 in-person" },
+      { name: "The Spark Session", desc: "A 90-minute interactive experience for teams of up to 50. Fast, focused, and immediately actionable." },
+      { name: "The Cyber Curiosity Workshop", desc: "A half-day experience for teams of up to 75. The full Cyber Curiosity methodology — habit assessment, scenario simulations, and a personalized action plan. Each participant receives a copy of Cyber Curiosity." },
+      { name: "The Executive Cyber Briefing", desc: "A focused 60-minute strategic session for leadership teams of 10-20. Not a training — a risk conversation in the language executives speak." },
     ],
     bestFor: "SMBs, corporate teams, HR and L&D initiatives, leadership retreats, and company off-sites.",
     cta: "Bring a Workshop to Your Team",
@@ -134,8 +134,7 @@ const Services = () => {
                   {service.offerings.map((o) => (
                     <div key={o.name} className="bg-background border border-border rounded-lg p-6">
                       <h3 className="font-heading text-xl font-semibold text-foreground mb-2">{o.name}</h3>
-                      <p className="text-muted-foreground font-body mb-3">{o.desc}</p>
-                      <p className="text-sm font-medium text-primary">{o.price}</p>
+                      <p className="text-muted-foreground font-body">{o.desc}</p>
                     </div>
                   ))}
                 </div>
