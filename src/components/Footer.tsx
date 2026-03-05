@@ -30,11 +30,11 @@ const Footer = () => {
             <h4 className="font-heading text-lg font-medium mb-4">Get in Touch</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hello@thecyberconsultantllc.com"
+                href="mailto:hello@lakeidra.com"
                 className="flex items-center gap-2 text-sm text-warm-grey-light hover:text-camel transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@thecyberconsultantllc.com
+                hello@lakeidra.com
               </a>
               <div className="flex items-center gap-2 text-sm text-warm-grey-light">
                 <MapPin className="w-4 h-4" />
