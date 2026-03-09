@@ -51,11 +51,8 @@ const Footer = () => {
               © {new Date().getFullYear()} Lakeidra Smith / The Cyber Consultant LLC. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-xs text-warm-grey-light hover:text-camel transition-colors">
+              <a href="https://www.linkedin.com/in/thecyberconsultant/" target="_blank" rel="noopener noreferrer" className="text-xs text-warm-grey-light hover:text-camel transition-colors">
                 LinkedIn
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-xs text-warm-grey-light hover:text-camel transition-colors">
-                X / Twitter
               </a>
             </div>
           </div>
