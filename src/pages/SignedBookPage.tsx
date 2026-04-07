@@ -54,11 +54,7 @@ const SignedBookPage = () => {
               viewport={{ once: true }}
               variants={fade}
             >
-              <div className="bg-secondary border-2 border-dashed border-warm-grey-light rounded-lg aspect-[3/4] flex items-center justify-center shadow-lg">
-                <p className="text-warm-grey font-body text-sm text-center px-8">
-                  [BOOK COVER PHOTO — upload product image here]
-                </p>
-              </div>
+              <img src={bookMockup} alt="Cyber Curiosity book cover" className="rounded-lg shadow-lg max-w-md mx-auto" />
             </motion.div>
 
             {/* Copy */}
