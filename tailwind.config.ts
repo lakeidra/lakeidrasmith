@@ -58,6 +58,7 @@ export default {
         "warm-grey-light": "hsl(var(--warm-grey-light))",
         gold: "hsl(var(--gold))",
         charcoal: "hsl(var(--charcoal))",
+        burgundy: "hsl(var(--burgundy))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
