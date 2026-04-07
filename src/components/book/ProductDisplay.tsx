@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import bookMockup from "@/assets/book-mockup.png";
-import bookLifestyle from "@/assets/book-lifestyle.png";
 
 const fade = {
   hidden: { opacity: 0, y: 30 },
