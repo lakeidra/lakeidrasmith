@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bookMockup from "@/assets/book-mockup.png";
+import bookLifestyle from "@/assets/book-lifestyle.png";
+import authorHeadshot from "@/assets/author-headshot.jpeg";
 
 const STRIPE_URL = "https://buy.stripe.com/eVa8xYdWHgA18Gk145";
 
@@ -51,11 +54,7 @@ const SignedBookPage = () => {
               viewport={{ once: true }}
               variants={fade}
             >
-              <div className="bg-secondary border-2 border-dashed border-warm-grey-light rounded-lg aspect-[3/4] flex items-center justify-center shadow-lg">
-                <p className="text-warm-grey font-body text-sm text-center px-8">
-                  [BOOK COVER PHOTO — upload product image here]
-                </p>
-              </div>
+              <img src={bookMockup} alt="Cyber Curiosity book cover" className="rounded-lg shadow-lg max-w-md mx-auto" />
             </motion.div>
 
             {/* Copy */}
@@ -153,11 +152,7 @@ const SignedBookPage = () => {
             </div>
 
             {/* Interior/Lifestyle placeholder */}
-            <div className="mt-12 bg-cream/10 border-2 border-dashed border-cream/20 rounded-lg aspect-[16/9] flex items-center justify-center">
-              <p className="text-cream/40 font-body text-sm text-center px-8">
-                [INTERIOR/LIFESTYLE PHOTO — upload second product image here]
-              </p>
-            </div>
+            <img src={bookLifestyle} alt="Someone reading Cyber Curiosity" className="rounded-lg shadow-lg" />
           </motion.div>
         </div>
       </section>
@@ -186,11 +181,7 @@ const SignedBookPage = () => {
               viewport={{ once: true }}
               variants={fade}
             >
-              <div className="bg-cream/10 border-2 border-dashed border-cream/20 rounded-lg aspect-[3/4] flex items-center justify-center">
-                <p className="text-cream/40 font-body text-sm text-center px-8">
-                  [AUTHOR PHOTO]
-                </p>
-              </div>
+              <img src={authorHeadshot} alt="Lakeidra Smith" className="rounded-lg shadow-lg" />
             </motion.div>
 
             <motion.div
