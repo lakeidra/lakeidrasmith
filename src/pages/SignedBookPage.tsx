@@ -181,11 +181,7 @@ const SignedBookPage = () => {
               viewport={{ once: true }}
               variants={fade}
             >
-              <div className="bg-cream/10 border-2 border-dashed border-cream/20 rounded-lg aspect-[3/4] flex items-center justify-center">
-                <p className="text-cream/40 font-body text-sm text-center px-8">
-                  [AUTHOR PHOTO]
-                </p>
-              </div>
+              <img src={authorHeadshot} alt="Lakeidra Smith" className="rounded-lg shadow-lg" />
             </motion.div>
 
             <motion.div
