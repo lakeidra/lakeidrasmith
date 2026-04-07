@@ -140,6 +140,11 @@ const BookPage = () => {
                 Buy Now <ArrowRight className="w-4 h-4" />
               </Button>
             </a>
+            <Link to="/book">
+              <Button size="lg" className="bg-gold text-charcoal hover:bg-gold/90 gap-2 w-full sm:w-auto">
+                Get Your Signed Copy <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
             <Link to="/contact?service=bulk-order">
               <Button size="lg" variant="outline" className="border-cream/30 text-cream hover:bg-cream/10 gap-2 w-full sm:w-auto">
                 Inquire About Bulk Orders <ArrowRight className="w-4 h-4" />
