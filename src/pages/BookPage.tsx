@@ -28,11 +28,18 @@ const BookPage = () => {
               <p className="mt-6 text-lg font-heading italic text-muted-foreground">
                 The framework for protecting yourself in a digital world designed to exploit you.
               </p>
-              <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-cognac gap-2">
-                  Get Your Copy <ArrowRight className="w-4 h-4" />
-                </Button>
-              </a>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a href="https://www.amazon.com/Cyber-Curiosity-Beginners-Cybersecurity-Yourself/dp/1636768695/" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-cognac gap-2 w-full sm:w-auto">
+                    Get Your Copy <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </a>
+                <Link to="/book">
+                  <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10 gap-2 w-full sm:w-auto">
+                    Get Your Signed Copy <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
