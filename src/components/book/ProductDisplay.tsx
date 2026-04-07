@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import bookMockup from "@/assets/book-mockup.png";
-import bookLifestyle from "@/assets/book-lifestyle.png";
 
 const fade = {
   hidden: { opacity: 0, y: 30 },
@@ -21,9 +20,8 @@ const ProductDisplay = () => (
   <section className="bg-cream py-20 lg:py-28">
     <div className="container mx-auto px-6 lg:px-12">
       <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start max-w-5xl mx-auto">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} className="space-y-6">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
           <img src={bookMockup} alt="Cyber Curiosity book cover" className="rounded-lg shadow-lg w-full max-w-md mx-auto" />
-          <img src={bookLifestyle} alt="Cyber Curiosity lifestyle" className="rounded-lg shadow-lg w-full max-w-md mx-auto" />
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
