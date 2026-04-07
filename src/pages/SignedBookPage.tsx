@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bookMockup from "@/assets/book-mockup.png";
+import bookLifestyle from "@/assets/book-lifestyle.png";
+import authorHeadshot from "@/assets/author-headshot.jpeg";
 
 const STRIPE_URL = "https://buy.stripe.com/eVa8xYdWHgA18Gk145";
 
